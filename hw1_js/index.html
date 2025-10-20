@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container ">
+        <div class="row">
+            <div class="col-xxl-6 col-xl-8 col-lg-10 col-md-12 mx-auto mt-5 p-4 rounded-3 shadow py-5" >
+                <h1 class="text-center mb-3">Простой калькулятор</h1>
+                <form>
+                    <div class="mb-3">
+                        <label for="number1" class="form-label">Первое число</label>
+                        <input type="text" class="form-control" id="number1" placeholder="Введите первое число">
+                    </div>
+                    <div class="mb-3">
+                        <label for="opInput" class="form-label">Операция</label>
+                        <input class="form-control" list="operation" id="opInput" placeholder="Выберите или введите..."/>
+                        <datalist id="operation">
+                            <option value="+">
+                            <option value="-">
+                            <option value="*">
+                            <option value="/">
+                        </datalist>
+                    </div>
+                    <div class="mb-3">
+                        <label for="number2" class="form-label">Второе число</label>
+                        <input type="text" class="form-control" id="number2" placeholder="Введите второе число">
+                    </div>
+                    <div class="mb-3">
+                        <button onclick="calculate()" type="button" class="btn btn-primary w-100 py-2">Вычислить</button>
+                    </div>
+                </form>
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header bg-primary text-white">
+                        Результат
+                    </div>
+                    <div class="card-body text-center">
+                        <h4 class="card-title" id="result">-</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
